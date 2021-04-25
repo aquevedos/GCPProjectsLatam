@@ -7,7 +7,7 @@ exports.startVM = function startVM(req, res) {
     try
     {
         var zone = compute.zone(default_zone);
-        var vms_start = zone.vm('devinstance');
+        var vms_start = zone.vm('dev-instance');
         vms_start.start(function(err, operation, apiResponse) 
             {
                 console.log('Successfully started');
@@ -29,7 +29,7 @@ exports.stopVM = function stopVM(req, res) {
      try
     {
          var zone = compute.zone(default_zone);
-         var vms_stop = zone.vm('devinstance');
+         var vms_stop = zone.vm('dev-instance');
          vms_stop.stop(function(err, operation, apiResponse) {
                 console.log('Successfully stopped');
             });
